@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('img2.jpg');
+            background-size: cover;
+            align-items: center;
+            display:flex;
+            justify-content:flex-start;
+            background-position: center;
+            min-height: 100vh;
+            backdrop-filter: blur(5px);
+        }    
+        
+        h1 {
+            color: black;
+            font-family: Inter;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            align-items: center;
+            display:flex;
+            width: 141px;
+            font-weight: bold;
+            margin-left:160px;
+        }
+        
+        button {
+            width: 84px;
+            height: 60px;
+            flex-shrink: 0;
+            
+        }
+
+        .container {
+            text-align: center;
+            align-items: center;
+            color:whitesmoke; 
+            width: 450px;
+            height: 500px;
+            flex-shrink: 0;
+            background-color: #ffffff; 
+            margin: auto;
+        }
+
+        input {
+            border-radius: 8px;
+            background-color: #F0F0F0;
+            width: 389px;
+            height: 50px;
+            flex-shrink: 0;
+            border-color: #F0F0F0;
+            margin-top:10px;
+        }
+
+        p{
+            color: #C1C1C1;
+            font-family: Khand;
+            font-size: 11px;
+            font-style: normal;
+        }
+       
+        .checkbox-container {
+            margin-top:0px;
+            margin-left:30px;
+            display:flex;
+            align-items:center;
+            justify-content:flex-start; 
+        }
+
+        input[type="checkbox"] {
+            width: 18px; 
+            height: 18px; 
+            margin-left: 10px; 
+        }
+
+        label {
+            font-family: 'inter';
+            font-size: 11px;
+            font-weight: 400;
+            margin-left: 5px; 
+            color: black;
+            align-items: center;
+        }
+
+        a {
+            color:#C1C1C1;
+        }                   
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Sign Up</h1>
+        <form id="registrationForm">
+            <div>
+            <input id="email" type="text" name="username" placeholder="Username" required> 
+            </div>
+            <div>
+            <input id="password" type="password" name="pass" placeholder="Password" required>
+            </div>
+            <div>
+            <input id="confirmPassword" type="password" name="pass2" placeholder="Confirm Password" required>
+            </div>
+            
+            <div class="checkbox-container">
+            <input type="checkbox" id="stay-signed-in" name="stay-signed-in">
+            <label for="stay-signed-in">Stay signed in</label>
+            </div>
+            <div>
+            <button id="btn" class="button" onclick="validateForm()">Submit</button>
+            </div>
+            
+        </form>
+
+        
+    <script src="asd.js"></script>
+    
+</body>
+</html>
