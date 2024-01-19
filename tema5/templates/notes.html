@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaugă Notiță</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+    <h2>Adaugă o Nouă Notiță</h2>
+
+    <form action="{{ url_for('add_note') }}" method="post">
+        <label for="note_content">Notița:</label><br>
+        <textarea id="note_content" name="note_content" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Adaugă Notiță">
+
+    </form>
+    <div class="signin-container">
+        <form action="your-login-action" method="post">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <div class="notes-container">
+        <h3>Notițele Mele</h3>
+        {% if user_notes %}
+            <ul>
+                {% for note in user_notes %}
+                    <li>{{ note.content }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nu ai notițe salvate.</p>
+        {% endif %}
+    </div>
+        
+
+    
+</body>
+</html>
